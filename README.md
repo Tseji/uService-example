@@ -12,6 +12,7 @@ and to facilitate the delegation between microservices, JWT (Json Web Token) has
 
 As quote from [Suresh Varman K] (https://www.cronj.com/blog/happy-building-microservices/) on "Happy building with Microservices" it depicted how things should put together.
 ![Alt text](https://www.cronj.com/blog/wp-content/uploads/2017/01/Microservices-1.png "Microservice API Gateway")
+
 1. The user request for Shopping cart service, the API gateway validated the user using the stored session.
 2. Redirects the user to the Auth service, asking to login, and validates the login.
 3. Response to the API gateway callback function with JWT.
