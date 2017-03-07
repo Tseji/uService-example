@@ -1,2 +1,2 @@
-# uService-example
+# uService Example
 Initial check-in
