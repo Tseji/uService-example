@@ -23,8 +23,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         
         http.csrf().disable() // disable csrf for our requests.
     	 .authorizeRequests()
-    	  // .antMatchers("/v2/**").permitAll()
-    	 //  .antMatchers(HttpMethod.POST, "/login").permitAll()
     	   .anyRequest().authenticated()
     	   .and()
     	  // And filter other requests to check the presence of JWT in header
