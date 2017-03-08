@@ -41,14 +41,14 @@ public class TokenAuthenticationService {
             		  .parseClaimsJws(token);
             
             		String scope = (String) claims.getBody().get("scope");
-            		System.out.println(scope);
+            		//System.out.println(scope);
             		//assertEquals(scope, "self groups/admins");
             
              Date exp = Jwts.parser()
           		  .setSigningKey(secret)
           		  .parseClaimsJws(token).getBody().getExpiration();
              
-                  System.out.println("Expiry Date:" + exp);
+                 // System.out.println("Expiry Date:" + exp);
             
             if(username != null) // we managed to retrieve a user
             {
