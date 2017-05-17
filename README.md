@@ -139,12 +139,23 @@ In the full example you will see that I have build a MethodArgument Resolver to 
 
  Use maven to start both applications with the following command:
 
+ ```
 mvn spring-boot:run
-Then navigate to http://localhost:8000 and you should find yourself landing on the Keycloak login page. Register yourself as a new user. After registering you will be redirected back to the Angular application and should see some details about your user.
+```
+
+Then navigate to http://localhost:8000 and you should find yourself landing on the Keycloak login page. 
+
+You can use default accounts to login:
+
+admin:admin
+manager:manager
+flash:flash
+
+You can also register yourself as a new user. After registering you will be redirected back to the Angular application and should see some details about your user.
 
 Please note that currently your user is not associated to any role defined earlier. That means accessing the backend is impossible because we have only allowed managers and admins to access the backend. To give your user access to the backend we have to map your user to a role.
 
-To do this, open the Keycloak admin console and navigate to “Users”. Then click on the button “View all users” and click on your username. After that navigate to the “Role Mappings” tab and assign the role “manager” to your user.
+To do this, open the Keycloak admin console (http://sso-esquel-test.eastasia.cloudapp.azure.com/auth/admin/Demo-Realm/console) and navigate to “Users”. Then click on the button “View all users” and click on your username. After that navigate to the “Role Mappings” tab and assign the role “manager” to your user.
 
 
 Now open up the Angular app again and you should see a “Call backend service” button that only managers can see. Click on it and some contracts from the backend should be returned together with your user information which comes also from the backend.
