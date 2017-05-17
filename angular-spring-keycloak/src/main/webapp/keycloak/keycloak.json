@@ -1,0 +1,7 @@
+{
+  "realm": "Demo-Realm",
+  "auth-server-url": "http://sso-esquel-test.eastasia.cloudapp.azure.com/auth",
+  "ssl-required": "external",
+  "resource": "tutorial-frontend",
+  "public-client": true
+}
