@@ -19,7 +19,7 @@ As quote from [Suresh Varman K] (https://www.cronj.com/blog/happy-building-micro
 4. The session will be created for the particular user.
 5. Redirects user to the shopping cart, and before requesting to Shopping cart service, the gateway will add the user information to the header so the shopping cart service knows the user details, which can be further used for communication between the services by passing the JWT.
 
-###Frontend application with AngularJS
+## Frontend application with AngularJS
 
 We want to build a small Angular application that is secured by a login page and where access is restricted to registered users only. Therefore every request which goes to the Angular application should be checked if it comes from a registered user or not. If a request does not come from a registered user, the request will be redirected to the login page where a user can register.
 
@@ -68,7 +68,7 @@ app.config(['$httpProvider', function($httpProvider) {
 }]);
 ```
 
-###Backend application with Spring Boot
+## Backend application with Spring Boot
 
 The backend application should be secured against unauthorized access. Therefore, like in the frontend, only requests coming from registered users should be accepted.
 
@@ -135,7 +135,7 @@ To access detailed user information in the backend we can use the KeycloakPrinci
 ```	
 In the full example you will see that I have build a MethodArgument Resolver to avoid having to deal with the Principal in the REST controllers but that is absolutely not necessary and just for convenience.
 
-##Demo
+## Demo
 
  Use maven to start both applications with the following command:
 
